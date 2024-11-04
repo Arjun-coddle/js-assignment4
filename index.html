@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/index.css">
+    <title>Assignment 4</title>
+</head>
+
+<body>
+    <h1>Hello World</h1>
+    <div id="box">
+        <p id="div-deatiles">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem corporis dolorem
+            expedita inventore minus, delectus .</p>
+    </div>
+    <button onclick="forHide()">hide div</button>
+    <button onclick="forChangeColor()">change colour</button>
+    <button id="showHide-btn" onclick="forHideShowDeatiles()">Hide Deatiles</button><br><br>
+
+    <label for="number">Select a number</label>
+    <select name="number" id="numberSelect" onchange="handleSelect()">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="0">10</option>
+    </select>
+
+    <div id="display-programming-langagues"></div>
+    <div>
+        <button onclick="bittonClicked('c')">c</button>
+        <button onclick="bittonClicked('HTML')">HTML</button>
+        <button onclick="bittonClicked('javascript')">javascript</button>
+        <button onclick="bittonClicked('Mysql')">Mysql</button>
+        <button onclick="bittonClicked('c++')">c++</button>
+        <button onclick="bittonClicked('php')">php</button>
+        <button onclick="bittonClicked('angular')">angular</button>
+        <button onclick="bittonClicked('react')">react</button>
+        <button onclick="bittonClicked('java')">java</button>
+        <button onclick="bittonClicked('phython')">phython</button>
+    </div>
+
+    <div class="form-field">
+        <form id="userForm" onsubmit="validateForm(event)">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name">
+                <div id="errorName" class="error"></div>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone">
+                <div id="errorPhone" class="error"></div>
+            </div>
+            <div class="form-group">
+                <label for="place">Place:</label>
+                <input type="text" id="place">
+                <div id="errorPlace" class="error"></div>
+            </div>
+            <div class="form-group">
+                <label for="company">Company Name:</label>
+                <input type="text" id="company">
+                <div id="errorCompany" class="error"></div>
+            </div>
+            <div class="form-group">
+                <label for="pincode">Pin Code:</label>
+                <input type="text" id="pincode">
+                <div id="errorPincode" class="error"></div>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+            <button type="button" id="prepopulateButton" onclick="prepopulateForm()">Prepopulate</button>
+        </form>
+    </div>
+
+    <form id="titleForm">
+        <label for="titleInput">Enter New Tab Title:</label><br>
+        <input type="text" id="titleInput" maxlength="50">
+        <div id="errorMessage" class="error"></div><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
