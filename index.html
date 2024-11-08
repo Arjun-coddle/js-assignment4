@@ -30,21 +30,12 @@
         <option value="7">7</option>
         <option value="8">8</option>
         <option value="9">9</option>
-        <option value="0">10</option>
+        <option value="10">10</option>
     </select>
 
-    <div id="display-programming-langagues"></div>
-    <div>
-        <button onclick="bittonClicked('c')">c</button>
-        <button onclick="bittonClicked('HTML')">HTML</button>
-        <button onclick="bittonClicked('javascript')">javascript</button>
-        <button onclick="bittonClicked('Mysql')">Mysql</button>
-        <button onclick="bittonClicked('c++')">c++</button>
-        <button onclick="bittonClicked('php')">php</button>
-        <button onclick="bittonClicked('angular')">angular</button>
-        <button onclick="bittonClicked('react')">react</button>
-        <button onclick="bittonClicked('java')">java</button>
-        <button onclick="bittonClicked('phython')">phython</button>
+    <div class="q3-container">
+        <div id="outputContainer"></div>
+        <div id="buttonContainer"></div>
     </div>
 
     <div class="form-field">
@@ -81,7 +72,7 @@
 
     <form id="titleForm">
         <label for="titleInput">Enter New Tab Title:</label><br>
-        <input type="text" id="titleInput" maxlength="50">
+        <input type="text" id="titleInput">
         <div id="errorMessage" class="error"></div><br>
         <button type="submit">Submit</button>
     </form>

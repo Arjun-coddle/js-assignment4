@@ -50,9 +50,22 @@ box.addEventListener('mouseout', () => {
 
 // 3. Consider an array with name of 10 programming languages, make 10 buttons by iterating this array, when clicked on
 // each button the name of the programming language should be shown in a corresponding div. 
-function bittonClicked(language) {
-    document.getElementById('display-programming-langagues').innerHTML = language;
-}
+const languages = ["javaScript", "Python", "Java", "C", "C++", "React js", "Angular", "Php", "node", "TypeScript"];
+const buttonContainer = document.getElementById('buttonContainer');
+const outputContainer = document.getElementById('outputContainer');
+
+languages.forEach((language, index) => {
+    const button = document.createElement('button');
+    button.innerText = language;
+    button.onclick = () => {
+        outputContainer.children[index].innerText = language;
+    };
+    buttonContainer.appendChild(button); 
+
+    const outputDiv = document.createElement('div');
+    outputContainer.appendChild(outputDiv); 
+});
+
 
 // 4. Make a form with fields name, phone number, place, company name, pin code
 // a. if any of the field is empty on submitting it should show corresponding error messages on below of all the required fields.
@@ -63,11 +76,11 @@ function bittonClicked(language) {
 function validateForm(event) {
     event.preventDefault();
 
-    const name = document.getElementById("name").value;
-    const phone = document.getElementById("phone").value;
-    const place = document.getElementById("place").value;
-    const company = document.getElementById("company").value;
-    const pincode = document.getElementById("pincode").value;
+    const name = document.getElementById("name").value.trim();;
+    const phone = document.getElementById("phone").value.trim();;
+    const place = document.getElementById("place").value.trim();;
+    const company = document.getElementById("company").value.trim();;
+    const pincode = document.getElementById("pincode").value.trim();;
 
     const errorName = document.getElementById("errorName");
     const errorPhone = document.getElementById("errorPhone");
@@ -175,7 +188,7 @@ document.getElementById('titleForm').addEventListener('submit', function(event) 
 });
 
 
-//When control+enter key is pressed show an alert message. 
+// 6. When control+enter key is pressed show an alert message. 
 document.addEventListener('keydown', function(event) {
     if (event.ctrlKey && event.key === 'Enter') {
         alert('Control + Enter was pressed');
